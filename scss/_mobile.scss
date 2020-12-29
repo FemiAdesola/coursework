@@ -10,6 +10,9 @@
   .education {
     grid-template-columns: repeat(3, 1fr);
   }
+  .about-skill {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 // For tablets and any small laptops
