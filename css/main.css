@@ -412,3 +412,65 @@ main {
     grid-template-columns: 1fr; }
   .Cover {
     grid-template-columns: 1fr; } }
+
+
+
+  body#projects {
+background: url("../img/Code.JPG");
+background-attachment: fixed;
+    background-size: cover; 
+opacity: 0.9;
+z-index: -1;
+}
+
+table{
+  width: 100%;
+  justify-content: center;
+  margin: 10px;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+
+}
+th{
+  height: 100px;
+}
+td {
+  padding: 15px;
+  text-align: left;
+}
+
+#t01 tr:nth-child(even) {
+  background-color: rgb(165, 124, 124);
+ 
+}
+#t01 tr:nth-child(odd) {
+ background-color: rgb(223, 180, 180);
+}
+#t01 th {
+  background-color: rgb(204, 186, 186);
+  color: white;
+  justify-content: center;
+}
+
+a.ok1{
+justify-content: center;
+display: flex;
+
+}
+
+button#btn{
+  font-size: 20px;
+  border-radius: 16px;
+  background: #008000;
+ 
+}
+
+#main-footer.pro{
+margin-top: 0;
+top: 0;
+}
+th.link{
+  width: 300px;
+}
