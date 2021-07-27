@@ -416,7 +416,7 @@ main {
 
 
   body#projects {
-background: url("../img/Code.JPG");
+background: url(../img/Code.JPG);
 background-attachment: fixed;
     background-size: cover; 
 opacity: 0.9;
