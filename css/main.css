@@ -492,6 +492,7 @@ body .project {
   }
   .menu-branding .portrait {
     background: url("../img/gra.JPG");
+    background-color: #8e958e;
     width: 300px;
     height: 300px;
   }
