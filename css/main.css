@@ -430,6 +430,11 @@ main#home h1 {
   color: #333;
 }
 
+body .project {
+  background: #0b0c0b;
+  color: #008000;
+}
+
 #main-footer {
   text-align: center;
   padding: 1rem;
