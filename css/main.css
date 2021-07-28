@@ -536,7 +536,7 @@ body .project {
 }
 
 body#projects {
-  background: url(../img/Code.JPG);
+  background: url(../img/code.JPG);
   background-attachment: fixed;
   background-size: cover;
   opacity: 0.9;
