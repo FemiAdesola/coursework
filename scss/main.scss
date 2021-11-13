@@ -19,12 +19,16 @@ h2,
 h3 {
   margin: 0;
   font-weight: 400;
-
+  &.marquee {
+    height: 40px;
+    background: rgba(lighten($primary-color, 2), 0.5);
+    color: orange;
+  }
   &.lg-heading {
     font-size: 3rem;
   }
   &.Xlg-heading {
-    font-size: 6rem;
+    font-size: 5rem;
   }
   &.sm-heading {
     margin-bottom: 2rem;
@@ -73,28 +77,14 @@ main {
     }
   }
 }
-.about-info {
+
+.work-info {
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
-    "profileimage profile profile profile"
-    "job1 job2 job3 job4";
-  grid-template-columns: repeat(4, 1fr);
-
-  .profile-image {
-    grid-area: profileimage;
-    margin: auto;
-    border-radius: 50%;
-    border: $secondary-color 3px solid;
-  }
-
-  .profile {
-    grid-area: profile;
-    font-size: 1.5 rem;
-    h2 {
-      text-decoration: underline;
-    }
-  }
+    "job1 job2"
+    "job3 job4";
+  grid-template-columns: repeat(2, 1fr);
 
   .job-1 {
     grid-area: job1;
@@ -110,7 +100,6 @@ main {
   .job-4 {
     grid-area: job4;
   }
-
   .job {
     background: lighten($primary-color, 5);
     padding: 1rem;
@@ -123,7 +112,33 @@ main {
   }
 }
 
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "profileimage profile";
+  grid-template-columns: repeat(2, 1fr);
+
+  .profile-image {
+    grid-area: profileimage;
+
+    margin: auto;
+    border-radius: 50%;
+    border: $secondary-color 3px solid;
+  }
+
+  .profile {
+    grid-area: profile;
+    font-size: 1.5 rem;
+    h2 {
+      text-decoration: underline;
+    }
+  }
+}
+
 // My education details
+#school img {
+  height: 10em;
+}
 .education {
   display: grid;
   grid-gap: 0.7rem;
@@ -132,6 +147,7 @@ main {
   img {
     width: 100%;
     border: 3px green solid;
+    display: flex;
 
     &:hover {
       opacity: 0.5;
@@ -178,14 +194,16 @@ main {
     }
   }
 }
+
 .about-skill {
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
-    "skill1 skill2 skill3"
-    "skill4 skill5 skill6 "
-    "publication publication publication";
-  grid-template-columns: repeat(3, 1fr);
+    "skill1 skill2"
+    "skill3 skill4"
+    "skill5 skill6 "
+    "publication publication";
+  grid-template-columns: repeat(2, 1fr);
 
   .skill-1 {
     grid-area: skill1;
@@ -220,6 +238,32 @@ main {
     margin: center;
   }
 }
+.Cover {
+  .boxes {
+    background-size: cover;
+    display: inline-block;
+    inline-size: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 0.5rem;
+    div {
+      font-size: 2rem;
+      border: 3px yellow dotted;
+      padding: 0.5rem 1.5rem;
+      margin-bottom: 6rem;
+      @include easeOut;
+
+      &:hover {
+        padding: 0.5rem 1.5rem;
+        background: $tertiary-color;
+        color: set-text-color($secondary-color);
+        span {
+          color: set-text-color($secondary-color);
+        }
+      }
+    }
+  }
+}
 
 .Education {
   display: grid;
@@ -242,6 +286,25 @@ main {
   color: #008000;
 }
 
+.btn-n {
+  display: inline-block;
+  background: #3c2b0b;
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 0.5em;
+  border: 1px solid #666;
+  margin: 2em 0;
+}
+.btn-n:hover {
+  background: #eaeaea;
+  color: #333;
+}
+
+body .project {
+  background: #0b0c0b;
+  color: #008000;
+}
+
 #main-footer {
   text-align: center;
   padding: 1rem;
@@ -250,5 +313,11 @@ main {
   color: set-text-color($primary-color);
   height: 60px;
 }
+
+#main-footer.pro {
+  margin-top: 0;
+  top: 0;
+}
+
 
 @import "mobile";

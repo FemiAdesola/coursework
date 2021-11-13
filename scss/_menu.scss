@@ -105,6 +105,13 @@
     &.current > a {
       color: $secondary-color;
     }
+    .about-menu {
+      transform: translate3d(300px, 0, 0);
+      @include easeOut;
+      &.show {
+        transform: translate3d(0, 0, 0);
+      }
+    }
   }
 
   .nav-link {
@@ -125,7 +132,7 @@
 }
 
 // to create each nave item slide delay
-@for $x from 1 through 5 {
+@for $x from 1 through 6 {
   .nav-item:nth-child(#{$x}) {
     transition-delay: $x * 0.1s;
   }

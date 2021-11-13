@@ -3,12 +3,18 @@
   .education {
     grid-template-columns: repeat(4, 1fr);
   }
+  .Cover {
+    grid-template-columns: 1fr;
+  }
 }
 
 // for desktops and laptops
 @include mediaLg {
   .education {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .skill {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -55,7 +61,11 @@
   .about-info {
     grid-template-areas:
       "profileimage"
-      "profile"
+      "profile";
+    grid-template-columns: 1fr;
+  }
+  .work-info {
+    grid-template-areas:
       "job1"
       "job2"
       "job3"
@@ -73,11 +83,11 @@
       "skill3"
       "skill4"
       "skill5"
-      "skill6";
+      "skill6"
+      "publication";
     grid-template-columns: 1fr;
   }
-  .publication {
-    grid-template-areas: "publication";
+  .Cover {
     grid-template-columns: 1fr;
   }
 }
@@ -95,6 +105,9 @@
     grid-template-columns: 1fr;
   }
   .publication {
+    grid-template-columns: 1fr;
+  }
+  .Cover {
     grid-template-columns: 1fr;
   }
 }
