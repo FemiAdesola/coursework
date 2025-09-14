@@ -1,6 +1,8 @@
 @use "config" as *;
 @use "menu";
 @use "mobile";
+@use "sass:color";
+
 
 * {
   box-sizing: border-box;
@@ -102,7 +104,7 @@ main {
     grid-area: job4;
   }
   .job {
-    background: lighten($primary-color, 5);
+    background: color.scale($primary-color, $lightness: 5%);
     padding: 1rem;
     margin: center;
     border-bottom: $secondary-color 5px solid;
@@ -321,3 +323,19 @@ body .project {
 }
 
 
+/* // school */
+/* Target the image inside the .item container */
+.item img {
+  width: 100%;
+  height: 200px; 
+  display: block; 
+  margin: 0.5rem 0; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s ease; 
+}
+
+/* Optional hover effect */
+.item img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
