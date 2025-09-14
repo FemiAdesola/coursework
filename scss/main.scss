@@ -1,5 +1,6 @@
-@import "config";
-@import "menu";
+@use "config" as *;
+@use "menu";
+@use "mobile";
 
 * {
   box-sizing: border-box;
@@ -57,7 +58,7 @@ header {
 
 main {
   padding: 4rem;
-  min-height: calc(100vh-60px);
+  min-height: calc(100vh - 60px);
 
   .icons {
     margin-top: 1rem;
@@ -136,13 +137,9 @@ main {
 }
 
 // My education details
-<<<<<<< HEAD
 #school img {
   height: 10em;
 }
-=======
-#school img{height:10em;}
->>>>>>> bb1ed52625ba62974de297be45221001c49934d3
 .education {
   display: grid;
   grid-gap: 0.7rem;
@@ -205,11 +202,7 @@ main {
   grid-template-areas:
     "skill1 skill2"
     "skill3 skill4"
-<<<<<<< HEAD
     "skill5 skill6 "
-=======
-    "skill5 skill6"
->>>>>>> bb1ed52625ba62974de297be45221001c49934d3
     "publication publication";
   grid-template-columns: repeat(2, 1fr);
 
@@ -328,4 +321,3 @@ body .project {
 }
 
 
-@import "mobile";
